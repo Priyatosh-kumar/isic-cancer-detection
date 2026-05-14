@@ -48,6 +48,14 @@ const CustomXAxisTick = ({ x, y, payload }) => {
   );
 };
 
+CustomXAxisTick.propTypes = {
+  x: PropTypes.number,
+  y: PropTypes.number,
+  payload: PropTypes.shape({
+    value: PropTypes.string,
+  }),
+};
+
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
