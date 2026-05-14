@@ -12,6 +12,8 @@ services:
         sync: false
       - key: CNN_MODEL_URL
         value: https://drive.google.com/file/d/1Qnyshey6Qk-jADI-DlkSJCgn_Npp-ZY0/view?usp=drive_link
+      - key: PYTHON_VERSION
+        value: 3.12.3
     
   # Frontend Static Site
   - type: web
