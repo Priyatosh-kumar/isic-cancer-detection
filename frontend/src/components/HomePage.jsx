@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import heroImage from '../assets/hero-image.png';
 import priyatoshImg from '../assets/priyatosh.jpeg';
@@ -60,7 +60,7 @@ const HomePage = () => {
           <h2 className="section-title" style={{ marginBottom: '2rem' }}>Our Solution</h2>
           
           <p className="approach-text" style={{ marginBottom: '1.5rem' }}>
-            Melanoma skin cancer is highly curable if it gets identified at the early stages. The first step of Melanoma skin cancer diagnosis is to conduct a visual examination of the skin's affected area. Dermatologists take the dermatoscopic images of the skin lesions by the high-speed camera, which have an accuracy of 65-80% in the melanoma diagnosis without any additional technical support. 
+            Melanoma skin cancer is highly curable if it gets identified at the early stages. The first step of Melanoma skin cancer diagnosis is to conduct a visual examination of the skin&apos;s affected area. Dermatologists take the dermatoscopic images of the skin lesions by the high-speed camera, which have an accuracy of 65-80% in the melanoma diagnosis without any additional technical support. 
           </p>
           
           <p className="approach-text" style={{ marginBottom: '1.5rem' }}>
@@ -68,7 +68,7 @@ const HomePage = () => {
           </p>
 
           <p className="approach-text">
-            The proposed system will be based on CNN (Convolutional Neural Network) to classify skin lesions as cancerous (melanoma) or non-cancerous (benign). It also considers patient-level contextual information to identify the cancer lesions' position in the affected area of the skin. The proposed solution may help dermatologists better support their diagnostic accuracy by ensembling contextual images and patient-level information, reducing the variance of predictions from the model.
+            The proposed system will be based on CNN (Convolutional Neural Network) to classify skin lesions as cancerous (melanoma) or non-cancerous (benign). It also considers patient-level contextual information to identify the cancer lesions&apos; position in the affected area of the skin. The proposed solution may help dermatologists better support their diagnostic accuracy by ensembling contextual images and patient-level information, reducing the variance of predictions from the model.
           </p>
         </div>
       </section>

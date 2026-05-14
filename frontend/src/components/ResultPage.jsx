@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import html2pdf from 'html2pdf.js';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import PropTypes from 'prop-types';
 
 const classMap = {
   "akiec": "Actinic keratosis",
@@ -60,6 +61,18 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number,
+      payload: PropTypes.shape({
+        fill: PropTypes.string,
+      }),
+    })
+  ),
+  label: PropTypes.string,
+};
 const ResultPage = () => {
   const location = useLocation();
   const navigate = useNavigate();

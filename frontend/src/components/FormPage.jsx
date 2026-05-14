@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UploadCloud, FileImage } from 'lucide-react';
+import { UploadCloud } from 'lucide-react';
 
 const FormPage = () => {
   const navigate = useNavigate();

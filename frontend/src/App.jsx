@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation, NavLink } from 'react-router-dom'
 import FormPage from './components/FormPage'
 import ResultPage from './components/ResultPage'
