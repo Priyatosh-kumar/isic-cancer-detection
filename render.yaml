@@ -1,0 +1,29 @@
+services:
+  # Backend API Service
+  - type: web
+    name: skin-classifier-api
+    env: python
+    plan: free
+    rootDir: skin-cancer-api
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CNN_MODEL_URL
+        value: https://drive.google.com/file/d/1Qnyshey6Qk-jADI-DlkSJCgn_Npp-ZY0/view?usp=drive_link
+    
+  # Frontend Static Site
+  - type: web
+    name: skin-classifier-ui
+    env: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: skin-classifier-api
+          envVarKey: RENDER_EXTERNAL_URL

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+tensorflow
+numpy
+pillow
+python-multipart
+onnxruntime
+python-dotenv
+requests
+gdown
